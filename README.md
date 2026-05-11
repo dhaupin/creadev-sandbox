@@ -7,17 +7,27 @@
 
 ## Install
 
-\`\`\`bash
+```bash
 npm install @creadev.org/sandbox
-\`\`\`
+```
 
 ## Usage
 
-\`\`\`typescript
-import { } from '@creadev.org/sandbox';
+```typescript
+import { Sandbox, createSandbox, run, isolate } from '@creadev.org/sandbox';
 
-// ...
-\`\`\`
+const sandbox = createSandbox();
+const result = await run('console.log("safe")', { timeout: 1000 });
+const isolated = isolate({ allowedGlobs: ['**'] });
+```
+
+## API
+
+| Function | Description |
+|----------|-------------|
+| `createSandbox(options?)` | Create sandbox |
+| `run(code, options?)` | Run safely |
+| `isolate(options?)` | Create isolated scope |
 
 ## License
 
