@@ -1,0 +1,40 @@
+{
+  "name": "@creadev.org/sandbox",
+  "version": "0.3.1",
+  "type": "module",
+  "description": "Sandbox module for gating, limiting, or otherwise keeping out unruly behavior",
+  "keywords": [
+    "sandbox",
+    "isolation",
+    "quota",
+    "gating"
+  ],
+  "author": "dhaupin",
+  "repository": "https://github.com/dhaupin/creadev-sandbox",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.1"
+  },
+  "dependencies": {
+    "@creadev.org/qos": "^0.3.1"
+  },
+  "files": [
+    "dist"
+  ]
+}
