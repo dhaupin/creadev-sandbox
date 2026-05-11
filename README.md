@@ -32,3 +32,4 @@ const isolated = isolate({ allowedGlobs: ['**'] });
 ## License
 
 MIT
+trigger
